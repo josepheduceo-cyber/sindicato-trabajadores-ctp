@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sindicato de Trabajadores - Unidos por nuestros derechos</title>
+    <style>
+        /* --- VARIABLES Y ESTILOS GENERALES --- */
+        :root {
+            --color-primario: #1a365d; /* Azul oscuro (seriedad) */
+            --color-secundario: #c53030; /* Rojo (fuerza/sindicato) */
+            --color-fondo: #f7fafc;
+            --color-texto: #2d3748;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--color-texto);
+            background-color: var(--color-fondo);
+            line-height: 1.6;
+        }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- HEADER / NAVEGACIÓN --- */
+        header {
+            background-color: var(--color-primario);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .logo span { color: var(--color-secundario); }
+        nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+        nav a:hover { color: var(--color-secundario); }
+
+        /* --- HERO (PORTADA) --- */
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+        .btn {
+            background-color: var(--color-secundario);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .btn:hover { background-color: #9b2c2c; }
+
+        /* --- SECCIONES --- */
+        section { padding: 60px 0; }
+        .section-title { text-align: center; font-size: 2rem; color: var(--color-primario); margin-bottom: 40px; }
+        
+        /* Beneficios */
+        .beneficios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .beneficio-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .beneficio-card h3 { color: var(--color-secundario); margin-top: 10px; }
+
+        /* Noticias */
+        .noticias { background-color: #edf2f7; }
+        .noticia-item { background: white; padding: 20px; margin-bottom: 20px; border-left: 5px solid var(--color-secundario); border-radius: 4px; }
+        .noticia-fecha { font-size: 0.9rem; color: #718096; font-weight: bold; }
+
+        /* Contacto */
+        .contacto-info { text-align: center; font-size: 1.1rem; }
+        .contacto-info p { margin: 10px 0; }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--color-primario);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 15px; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Sindicato <span>Unidos</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#noticias">Noticias</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PORTADA (HERO) -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>La fuerza está en la unión</h1>
+            <p>Defendemos tus derechos, mejoramos tus condiciones laborales y construimos un futuro justo para todos.</p>
+            <a href="#contacto" class="btn">Afíliate Ahora</a>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section id="beneficios">
+        <div class="container">
+            <h2 class="section-title">¿Por qué afiliarte?</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <h3>⚖️ Asesoría Legal</h3>
+                    <p>Protección jurídica gratuita en conflictos laborales, despidos y revisión de contratos.</p>
+                </div>
+                <div class="beneficio-card">
+                    <h3>📈 Negociación Colectiva</h3>
+                    <p>Luchamos por mejores salarios, bonos y condiciones de seguridad en el trabajo.</p>
+                </div>
+                <div class="beneficio-card">
+                    <h3>🎓 Capacitación</h3>
+                    <p>Cursos gratuitos para tu desarrollo profesional y crecimiento dentro de la empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOTICIAS -->
+    <section class="noticias" id="noticias">
+        <div class="container">
+            <h2 class="section-title">Últimas Noticias</h2>
+            <div class="noticia-item">
+                <p class="noticia-fecha">24 de Octubre, 2023</p>
+                <h3>Acuerdo histórico en la mesa de negociación</h3>
+                <p>Tras semanas de diálogo, hemos logrado un incremento salarial del X% para el próximo periodo...</p>
+            </div>
+            <div class="noticia-item">
+                <p class="noticia-fecha">15 de Octubre, 2023</p>
+                <h3>Asamblea General Ordinaria</h3>
+                <p>Convocamos a todos los afiliados a la asamblea mensual este viernes en el salón principal...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <div class="container contacto-info">
+            <h2 class="section-title">Contáctanos</h2>
+            <p>📍 <strong>Dirección:</strong> Calle de la Solidaridad 123, Ciudad</p>
+            <p>📞 <strong>Teléfono:</strong> +00 123 456 789</p>
+            <p>✉️ <strong>Email:</strong> contacto@sindicatounidos.org</p>
+            <p>🕒 <strong>Horario de atención:</strong> Lunes a Viernes de 9:00 a 17:00</p>
+            <br>
+            <a href="mailto:contacto@sindicatounidos.org" class="btn">Enviar un mensaje</a>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Sindicato de Trabajadores Unidos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
